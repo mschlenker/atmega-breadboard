@@ -1,0 +1,148 @@
+
+########### Try to extract clock
+
+menu.clock=Clock
+
+########### Rasterduino
+
+atmega328bb.name=ATmega328P barebone (Rasterduino)
+
+atmega328bb.menu.clock.int01mhz=1MHz internal clock (2V)
+atmega328bb.menu.clock.int01mhznobod=1MHz internal clock (2V, w/o BOD)
+atmega328bb.menu.clock.int08mhz=8MHz internal clock (3,3V)
+atmega328bb.menu.clock.int08mhznobod=8MHz internal clock (3,3V, w/o BOD)
+atmega328bb.menu.clock.ext16mhz=16MHz external clock (5V)
+
+atmega328bb.menu.clock.int01mhz.bootloader.low_fuses=0x62
+atmega328bb.menu.clock.int01mhznobod.bootloader.low_fuses=0x62
+atmega328bb.menu.clock.int08mhz.bootloader.low_fuses=0xE2
+atmega328bb.menu.clock.int08mhznobod.bootloader.low_fuses=0xE2
+atmega328bb.menu.clock.ext16mhz.bootloader.low_fuses=0xFE
+
+atmega328bb.menu.clock.int01mhz.bootloader.extended_fuses=0x06
+atmega328bb.menu.clock.int01mhznobod.bootloader.extended_fuses=0x07
+atmega328bb.menu.clock.int08mhz.bootloader.extended_fuses=0x05
+atmega328bb.menu.clock.int08mhznobod.bootloader.extended_fuses=0x07
+atmega328bb.menu.clock.ext16mhz.bootloader.extended_fuses=0x04
+
+atmega328bb.upload.tool=arduino:avrdude
+atmega328bb.upload.protocol=arduino
+atmega328bb.upload.maximum_size=30720
+atmega328bb.upload.maximum_data_size=2048
+atmega328bb.upload.speed=57600
+atmega328bb.bootloader.tool=arduino:avrdude
+atmega328bb.bootloader.high_fuses=0xDA
+
+atmega328bb.bootloader.unlock_bits=0x3F
+atmega328bb.bootloader.lock_bits=0x0F
+
+atmega328bb.menu.clock.int01mhz.bootloader.file=ATmegaBOOT_168_atmega328_pro_8MHz.hex
+atmega328bb.menu.clock.int01mhznobod.bootloader.file=ATmegaBOOT_168_atmega328_pro_8MHz.hex
+atmega328bb.menu.clock.int08mhz.bootloader.file=ATmegaBOOT_168_atmega328_pro_8MHz.hex
+atmega328bb.menu.clock.int08mhznobod.bootloader.file=ATmegaBOOT_168_atmega328_pro_8MHz.hex
+atmega328bb.menu.clock.ext16mhz.bootloader.file=ATmegaBOOT_168_atmega328.hex
+
+atmega328bb.build.mcu=atmega328p
+
+atmega328bb.menu.clock.int01mhz.build.f_cpu=1000000L
+atmega328bb.menu.clock.int01mhznobod.build.f_cpu=1000000L
+atmega328bb.menu.clock.int08mhz.build.f_cpu=8000000L
+atmega328bb.menu.clock.int08mhznobod.build.f_cpu=8000000L
+atmega328bb.menu.clock.ext16mhz.build.f_cpu=16000000L
+
+atmega328bb.build.board=AVR_PRO
+atmega328bb.build.core=arduino:arduino
+atmega328bb.build.variant=arduino:standard
+
+########### Rastertiny 
+
+attiny45.name=ATtiny45 barebone (Rastertiny)
+attiny45.menu.clock.int01mhz=1MHz internal clock
+attiny45.menu.clock.int08mhz=8MHz internal clock
+#attiny45.menu.clock.ext16mhz=16MHz external clock
+attiny45.menu.clock.int01mhz.low_fuses=0x62
+attiny45.menu.clock.int08mhz.low_fuses=0xe2
+#attiny45.menu.clock.ext16mhz.low_fuses=0xfe
+attiny45.menu.clock.int01mhz.build.f_cpu=1000000L
+attiny45.menu.clock.int08mhz.build.f_cpu=8000000L
+#attiny45.menu.clock.ext16mhz.build.f_cpu=16000000L
+#attiny45.bootloader.unlock_bits=0x3F
+#attiny45.bootloader.lock_bits=0x0F
+attiny45.bootloader.high_fuses=0xdf
+attiny45.bootloader.extended_fuses=0xff
+attiny45.bootloader.tool=arduino:avrdude
+attiny45.upload.maximum_size=4096
+attiny45.upload.tool=arduino:avrdude
+attiny45.upload.protocol=arduino
+attiny45.build.mcu=attiny45
+attiny45.build.core=arduino:arduino
+attiny45.build.variant=tiny8
+
+attiny85.name=ATtiny85 barebone (Rastertiny)
+attiny85.menu.clock.int01mhz=1MHz internal clock
+attiny85.menu.clock.int08mhz=8MHz internal clock
+#attiny85.menu.clock.ext16mhz=16MHz external clock
+attiny85.menu.clock.int01mhz.low_fuses=0x62
+attiny85.menu.clock.int08mhz.low_fuses=0xe2
+#attiny85.menu.clock.ext16mhz.low_fuses=0xfe
+attiny85.menu.clock.int01mhz.build.f_cpu=1000000L
+attiny85.menu.clock.int08mhz.build.f_cpu=8000000L
+#attiny85.menu.clock.ext16mhz.build.f_cpu=16000000L
+attiny85.bootloader.high_fuses=0xdf
+attiny85.bootloader.extended_fuses=0xff
+attiny85.bootloader.tool=arduino:avrdude
+attiny85.upload.maximum_size=8192
+attiny85.upload.tool=arduino:avrdude
+attiny85.upload.protocol=arduino
+attiny85.build.mcu=attiny85
+attiny85.build.core=arduino:arduino
+attiny85.build.variant=tiny8
+
+attiny44.name=ATtiny44 barebone (Rastertiny)
+attiny44.menu.clock.int01mhz=1MHz internal clock
+attiny44.menu.clock.int08mhz=8MHz internal clock
+attiny44.menu.clock.ext16mhz=16MHz external clock
+attiny44.menu.clock.ext20mhz=20MHz external clock
+attiny44.menu.clock.int01mhz.low_fuses=0x62
+attiny44.menu.clock.int08mhz.low_fuses=0xe2
+attiny44.menu.clock.ext16mhz.low_fuses=0xfe
+attiny44.menu.clock.ext20mhz.low_fuses=0xfe
+attiny44.menu.clock.int01mhz.build.f_cpu=1000000L
+attiny44.menu.clock.int08mhz.build.f_cpu=8000000L
+attiny44.menu.clock.ext16mhz.build.f_cpu=16000000L
+attiny44.menu.clock.ext20mhz.build.f_cpu=20000000L
+attiny44.bootloader.high_fuses=0xdf
+attiny44.bootloader.extended_fuses=0xff
+attiny44.bootloader.tool=arduino:avrdude
+attiny44.upload.maximum_size=4096
+attiny44.upload.tool=arduino:avrdude
+attiny44.upload.protocol=arduino
+attiny44.build.mcu=attiny44
+attiny44.build.core=arduino:arduino
+attiny44.build.variant=tiny14
+
+attiny84.name=ATtiny84 barebone (Rastertiny)
+attiny84.menu.clock.int01mhz=1MHz internal clock
+attiny84.menu.clock.int08mhz=8MHz internal clock
+attiny84.menu.clock.ext16mhz=16MHz external clock
+attiny84.menu.clock.ext20mhz=20MHz external clock
+attiny84.menu.clock.int01mhz.low_fuses=0x62
+attiny84.menu.clock.int08mhz.low_fuses=0xe2
+attiny84.menu.clock.ext16mhz.low_fuses=0xfe
+attiny84.menu.clock.ext20mhz.low_fuses=0xfe
+attiny84.menu.clock.int01mhz.build.f_cpu=1000000L
+attiny84.menu.clock.int08mhz.build.f_cpu=8000000L
+attiny84.menu.clock.ext16mhz.build.f_cpu=16000000L
+attiny84.menu.clock.ext20mhz.build.f_cpu=20000000L
+attiny84.bootloader.high_fuses=0xdf
+attiny84.bootloader.extended_fuses=0xff
+attiny84.bootloader.tool=arduino:avrdude
+attiny84.upload.maximum_size=8192
+attiny84.upload.tool=arduino:avrdude
+attiny84.upload.protocol=arduino
+attiny84.build.mcu=attiny84
+attiny84.build.core=arduino:arduino
+attiny84.build.variant=tiny14
+
+
+
